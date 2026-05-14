@@ -1,0 +1,24 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class project1 {
+   public project1() {
+   }
+
+   public static void main(String[] var0) throws FileNotFoundException {
+      Scanner var1 = new Scanner(new File("C:/Users/User/OneDrive/Desktop/dictionary.txt"));
+      ArrayList var2 = new ArrayList();
+
+      while(var1.hasNext()) {
+         var2.add(var1.nextLine());
+      }
+
+      Random var3 = new Random();
+      String var4 = (String)var2.get(var3.nextInt(var2.size()));
+      System.out.println(var4);
+   }
+}
